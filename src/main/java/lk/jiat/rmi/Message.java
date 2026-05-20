@@ -1,5 +1,8 @@
 package lk.jiat.rmi;
 
-public interface Message {
-    public void hello();
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+
+public interface Message extends Remote {
+    public void hello() throws RemoteException;
 }

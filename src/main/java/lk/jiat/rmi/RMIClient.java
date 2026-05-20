@@ -15,6 +15,9 @@ public class RMIClient {
                 System.out.println(s);
             }
 
+            Message message = (Message) registry.lookup("message_service");
+            message.hello();
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
