@@ -23,6 +23,7 @@ public class RMIClient {
 //            System.out.println(msg);
 
             Data data = message.getData();
+            System.out.println(data);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
