@@ -46,7 +46,7 @@ public class RMIClient {
             prop.put(Context.PROVIDER_URL, "rmi://127.0.0.1:6666");
             prop.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.rmi.registry.RegistryContextFactory");
 
-            InitialContext ic = new InitialContext();
+            InitialContext ic = new InitialContext(prop);
             UserService userService = (UserService) ic.lookup("user_service");
 
             userService.addUser(1, new User(1,"Lakshan","lakshan@gmail.com","Colombo"));
